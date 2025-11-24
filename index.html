@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Admin — Ludo Champion Pro</title>
+<link rel="stylesheet" href="../assets/style.css"/>
+</head>
+<body>
+<header class="site-header">Ludo Champion Pro — Admin</header>
+<main class="container">
+  <section id="login" class="card">
+    <h2>Admin Login</h2>
+    <input id="adminId" placeholder="Admin ID"/>
+    <input id="adminPass" placeholder="Password" type="password"/>
+    <button id="adminLoginBtn">Login</button>
+    <p class="muted">Default test credentials: <b>admin / admin123</b></p>
+  </section>
+
+  <section id="panel" class="card hidden">
+    <h2>Admin Dashboard</h2>
+    <div class="grid-2">
+      <div class="card small">
+        <h3>Pending Deposits</h3>
+        <div id="pendingDeposits" class="list">No pending deposits</div>
+      </div>
+      <div class="card small">
+        <h3>Pending Withdrawals</h3>
+        <div id="pendingWithdrawals" class="list">No pending withdrawals</div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top:12px">
+      <h3>Pending Win Submissions</h3>
+      <div id="pendingWins" class="list">No pending wins</div>
+    </div>
+
+    <div class="card" style="margin-top:12px">
+      <h3>Scanner Image</h3>
+      <input id="scannerUpload" type="file" accept="image/*"/>
+      <button id="uploadScannerBtn">Upload / Change Scanner</button>
+    </div>
+
+    <div class="card" style="margin-top:12px">
+      <h3>Manual Credit / Commission</h3>
+      <input id="manualPrize" placeholder="Total prize (₹)" type="number"/>
+      <input id="manualWinner" placeholder="Winner mobile"/>
+      <button id="manualCreditBtn">Calculate & Credit</button>
+      <p id="manualOut" class="muted"></p>
+    </div>
+
+    <div style="margin-top:12px" class="flex">
+      <button id="adminLogoutBtn">Logout</button>
+    </div>
+  </section>
+
+  <p class="muted">This admin panel is for testing. Actions are simulated locally.</p>
+</main>
+
+<script src="../assets/admin.js"></script>
+</body>
+</html>
